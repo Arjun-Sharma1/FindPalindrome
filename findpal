@@ -1,0 +1,12 @@
+permute=/student/csc209/a1/permute
+isPal=/student/csc209/a1/ispalindrome
+echo $* | $permute $* | # Pipes all possible combinations of the words
+{
+	while read x     #Reads each words and checks for palindromes
+	do
+		if $isPal "$x"
+		then
+		echo $x
+		fi
+	done
+}
